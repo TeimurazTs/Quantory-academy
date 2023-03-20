@@ -1,0 +1,298 @@
+/* Modified default browser font size. hence working with rem is now cool cause 13x10 is easy to calculate and 16x13 is not. */
+html {
+    font-size: 62.5%;
+}
+
+/* Setting background for the project */
+body {
+    background-image: url(./asset/light-blue.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Working on the phone*/
+.head {
+    margin-bottom: 3rem;
+}
+
+.phone-3d {
+    background-color: rgb(153, 136, 42);
+    border-radius: 2.5rem;
+}
+
+.phone {
+    height: 64.72rem;
+    width: 32.636rem;
+    border-radius: 2.5rem;
+    background-color: #fff;
+    padding: 1rem 0.2rem;
+    border: 0.2rem solid rgb(153, 136, 42);
+    box-shadow: -10px -10px 5px rgba(0, 0, 0, 0.15);
+    position: relative;
+    left: 0.5rem;
+    top: -0.4rem;
+}
+
+/* Here we work with the Head part of the phone */
+.camera-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.camera {
+    background-color: black;
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 50%;
+}
+
+.mic-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mic {
+    width: 4rem;
+    height: 0.3rem;
+    background-color: black;
+    border-radius: 0.6rem;
+}
+
+.mic::before {
+    content: "";
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    background-color: black;
+    display: block;
+    position: relative;
+    top: 0.2rem;
+    left: -2.5rem;
+    transform: translate(-50%, -50%);
+}
+
+/* Here we work on the mid part of the phone */
+
+.mid {
+    background-image: url(./asset/david.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 85%;
+    padding: 0.6rem;
+    margin-bottom: 1rem;
+}
+
+.properties {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5rem;
+}
+
+
+
+.first-line {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.ball {
+    display: inline-block;
+    width: 0.4rem;
+    height: 0.5rem;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.sim-card {
+    font-size: 50%;
+    color: #fff;
+}
+
+.fa {
+    color: #fff;
+}
+
+.mid-divider {
+    width: 3rem;
+    height: 0.5rem;
+    background-color: grey;
+    border-radius: 0.9rem;
+    position: relative;
+    left: -2.8rem;
+}
+
+.date-and-time {
+    margin-bottom: 35rem;
+}
+
+.time {
+    font-size: 4rem;
+    color: #fff;
+    text-align: center;
+}
+
+.date {
+    color: #fff;
+    text-align: center;
+}
+
+.slide {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 2rem;
+    background: linear-gradient(to right, black 30%, white 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: 0;
+    margin-bottom: 2.8rem;
+}
+
+.divider-bottom-camera-icon {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12.9rem;
+}
+
+.divider-bottom {
+    width: 3rem;
+    height: 0.5rem;
+    background-color: rgb(79, 78, 78);
+    border-radius: 0.9rem;
+    /* position: relative; */
+    /* left: 2.8rem; */
+}
+
+.fa-angle-right {
+    color: #000;
+}
+
+/* last part of the phone is CCCSED here */
+
+.bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fat-man {
+    width: 3.4rem;
+    height: 3.4rem;
+    background-color: rgb(92, 82, 26);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.little-boy {
+    width: 3.2rem;
+    height: 3.2rem;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.high-button {
+    width: rem;
+}
+
+.snooze-button {
+    width: 0.3rem;
+    height: 2rem;
+    background-color: rgb(90, 89, 89);
+    position: absolute;
+    top: 7.5rem;
+    left: -0.31rem;
+    transform: translate(-50%, -50%);
+}
+
+.snooze-button-3d {
+    width: 0.3rem;
+    height: 2rem;
+    background-color: rgb(224, 220, 220);
+    position: absolute;
+    top: 7.37rem;
+    left: -0.21rem;
+    transform: translate(-50%, -50%);
+}
+
+.high-volume-button {
+    width: 0.3rem;
+    height: 4rem;
+    background-color: rgb(84, 81, 81);
+    position: absolute;
+    top: 11.5rem;
+    left: -0.31rem;
+    transform: translate(-50%, -50%);
+}
+
+.high-volume-button-3d {
+    width: 0.3rem;
+    height: 4rem;
+    background-color: rgb(224, 220, 220);
+    position: absolute;
+    top: 11.37rem;
+    left: -0.21rem;
+    transform: translate(-50%, -50%);
+}
+
+.low-volume-button {
+    width: 0.3rem;
+    height: 4rem;
+    background-color: rgb(88, 85, 85);
+    position: absolute;
+    top: 16rem;
+    left: -0.31rem;
+    transform: translate(-50%, -50%);
+}
+
+.low-volume-button-3d {
+    width: 0.3rem;
+    height: 4rem;
+    background-color: rgb(224, 220, 220);
+    position: absolute;
+    top: 15.8rem;
+    left: -0.21rem;
+    transform: translate(-50%, -50%);
+}
+
+.left-iron {
+    width: 0.57rem;
+    height: 1rem;
+    background-color: rgb(224, 220, 220);
+    position: absolute;
+    top: 4.5rem;
+    left: -0.29rem;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(to right, grey, white);
+}
+
+.left-iron-bottom {
+    width: 0.57rem;
+    height: 1rem;
+    background-color: rgb(224, 220, 220);
+    position: absolute;
+    top: 60.5rem;
+    left: -0.29rem;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(to right, grey, white);
+}
+
+.left-button {
+    width: 0.3rem;
+    height: 4rem;
+    background-color: rgb(223, 216, 216);
+    position: absolute;
+    top: 14rem;
+    left: 32.4rem;
+    transform: translate(-50%, -50%);
+}
