@@ -1,1 +1,0 @@
-# Quantory-academy-mobile
