@@ -1,1 +1,0 @@
-# quantory-academy-dvd-logo
