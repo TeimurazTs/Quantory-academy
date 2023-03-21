@@ -2,8 +2,8 @@ const dvdLogo = document.querySelector('.dvd-logo');
 let xDirection = 1;
 let yDirection = 1;
 
-let audioForX = new Audio('/dvd-logo/assets/laser.mp3');
-let audioForY = new Audio('/dvd-logo/assets/laser.mp3');
+let audioForX = new Audio('assets/laser.mp3');
+let audioForY = new Audio('assets/laser.mp3');
 
 let rect;
 
