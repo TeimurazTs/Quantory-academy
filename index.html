@@ -1,17 +1,282 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="desktop">
+      <div class="desktop__side-panel">
+        <header class="side-panel__nav-header">
+          <img src="./images/logo-main.svg" alt="" />
+        </header>
 
-<body>
-    <img class="dvd-logo"  src="assets/dvd_logo.png">
-    <script src="index.js"></script>
-</body>
+        <nav class="side-panel__navigation">
+          <h5 class="nav__headings font-inter">D A S H B O A R D</h5>
 
+          <div class="nav__title-container">
+            <img src="./images/icon-dashboard.svg" alt="" />
+            <h6 class="nav__titles font-inter">Dashboard</h6>
+            <img src="./images/arrow-up.svg" alt="" />
+          </div>
+          <ul class="nav__ul">
+            <li class="ul__list font-inter">Analitics</li>
+            <li class="ul__list font-inter">Finance</li>
+            <li class="ul__list font-inter">Job Board</li>
+          </ul>
+          <div class="nav__title-container">
+            <img src="./images/icon-mail.svg" alt="" />
+            <h6 class="nav__titles font-inter">Messages</h6>
+            <img src="./images/arrow-down.svg" alt="" />
+          </div>
+          <div class="nav__title-container">
+            <img src="./images/icon-social.svg" alt="" />
+            <h6 class="nav__titles font-inter">Friends</h6>
+            <img src="./images/arrow-down.svg" alt="" />
+          </div>
+          <div class="nav__title-container">
+            <img src="./images/icon-rectangles.svg" alt="" />
+            <h6 class="nav__titles font-inter">Apps</h6>
+            <img src="./images/arrow-down.svg" alt="" />
+          </div>
+          <h5 class="nav__headings font-inter">P A G E S</h5>
+          <div class="nav__title-container">
+            <img src="./images/icon-help-center.svg" alt="" />
+            <h6 class="nav__titles font-inter">Help Center</h6>
+            <img src="./images/arrow-down.svg" alt="" />
+          </div>
+          <div class="nav__title-container">
+            <img src="./images/icon-file-manager.svg" alt="" />
+            <h6 class="nav__titles font-inter">File Manager</h6>
+            <img src="./images/arrow-down.svg" alt="" />
+          </div>
+
+          <footer class="nav__footer">
+            <div class="footer__container">
+              <img src="./images/icon-mechanism.svg" alt="" />
+              <img src="./images/icon-log-out.svg" alt="" />
+              <img src="./images/icon-globe.svg" alt="" />
+            </div>
+          </footer>
+        </nav>
+      </div>
+      <div class="desktop__main-container">
+        <div class="main-container__search-bar">
+          <img
+            src="./images/icon-for-search-bar.svg"
+            class="search-bar-img"
+            alt=""
+          />
+          <input
+            class="search-bar-input"
+            type="text"
+            placeholder="     Search..."
+          />
+          <div class="search-bar__icons">
+            <img src="./images/icon-ring.svg" alt="" />
+            <img src="./images/icon-calendar.svg" alt="" />
+            <img src="./images/icon-rectangles.svg" alt="" />
+            <img src="./images/picture-profile.png" alt="" />
+          </div>
+        </div>
+        <div class="main-container__upgrade">
+          <div class="upgrade__titles">
+            <h4 class="upgrade__title1 font-inter">Unlock premium stats</h4>
+            <h3 class="upgrade__title2 font-inter">
+              Get up to 10TB of storage for a limited time
+            </h3>
+          </div>
+          <button class="upgrade__button">
+            <img src="./images/icon-energy.svg" alt="" />
+            Upgrade
+          </button>
+        </div>
+        <div class="main-container__cards">
+          <div class="card">
+            <div class="card__titles">
+              <h3 class="card__title font-inter">Revenue</h3>
+              <h4 class="card__data font-inter">$56,945</h4>
+            </div>
+            <div class="card__details">
+              <div class="card__status green-status">
+                <span class="card__percentage font-inter">+45%</span>
+              </div>
+              <span class="card__percentage-2 font-inter">From 4.6%</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card__titles">
+              <h3 class="card__title font-inter">Users</h3>
+              <h4 class="card__data font-inter">76.8%</h4>
+            </div>
+            <div class="card__details">
+              <div class="card__status red-status">
+                <span class="card__percentage font-inter">-1.7%</span>
+              </div>
+              <span class="card__percentage-2 font-inter">From 4.6%</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card__titles">
+              <h3 class="card__title font-inter">New Signups</h3>
+              <h4 class="card__data font-inter">116</h4>
+            </div>
+            <div class="card__details">
+              <div class="card__status gray-status">
+                <span class="card__percentage font-inter">0.00%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card__titles">
+              <h3 class="card__title font-inter">Retention</h3>
+              <h4 class="card__data font-inter">12.67%</h4>
+            </div>
+            <div class="card__details">
+              <div class="card__status green-status">
+                <span class="card__percentage font-inter">+0.6%</span>
+              </div>
+              <span class="card__percentage-2 font-inter">From 4.6%</span>
+            </div>
+          </div>
+
+          <div class="main-container__chart">
+            <div class="chart__header">
+              <h4 class="chart__title">Performance</h4>
+              <img src="./images/icon-settings.svg" alt="icon" />
+            </div>
+            <div class="chart__img"></div>
+            <div class="chart__data">
+              <div class="chart__social">
+                <div class="chart__dot chart__social-dot-1"></div>
+                <span>Instagram</span>
+              </div>
+              <div class="chart__social">
+                <div class="chart__dot chart__social-dot-2"></div>
+                <span>Facebook</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="main-container__grid">
+            <div class="chart__header">
+              <h4 class="chart__title">Installed apps</h4>
+              <img src="./images/icon-settings.svg" alt="icon" />
+            </div>
+            <div class="grid">
+              <div class="grid-item grid-item__text font-inter">
+                <div>Source</div>
+              </div>
+              <div class="grid-item grid-item__text font-inter">
+                <div>Amount</div>
+              </div>
+              <div class="grid-item grid-item__text font-inter">
+                <div>Status</div>
+              </div>
+              <div class="grid-item grid-item__text font-inter">
+                <div>User ID</div>
+              </div>
+              <div class="grid-item grid-item__text font-inter">
+                <div>Joined</div>
+              </div>
+              <div class="grid-item grid-item__text font-inter">
+                <div>Group</div>
+              </div>
+              <div class="grid-item">
+                <div class="grid-item__flex font-inter">
+                  <img src="./images/logo-zeplin.svg" alt="icon" />
+                  <span>Zeplin</span>
+                </div>
+              </div>
+              <div class="grid-item grid-item__text font-inter">686.00</div>
+              <div
+                class="grid-item grid-item__text font-inter grid_status active"
+              >
+                Active
+              </div>
+              <div class="grid-item grid-item__text font-inter">114423</div>
+              <div class="grid-item grid-item__text font-inter">October</div>
+              <div class="grid-item grid-item__text font-inter">Design</div>
+              <div class="grid-item grid-item__text font-inter">
+                <div class="grid-item">
+                  <div class="grid-item__flex font-inter">
+                    <img src="./images/logo-figma.svg" alt="icon" />
+                    <span>Figma</span>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-item grid-item__text font-inter">864.00</div>
+              <div
+                class="grid-item grid-item__text font-inter grid_status pending"
+              >
+                Pending
+              </div>
+              <div class="grid-item grid-item__text font-inter">76223</div>
+              <div class="grid-item grid-item__text font-inter">June</div>
+              <div class="grid-item grid-item__text font-inter">Finance</div>
+              <div class="grid-item grid-item__text font-inter">
+                <div class="grid-item">
+                  <div class="grid-item__flex font-inter">
+                    <img src="./images/logo-meta.svg" alt="icon" />
+                    <span>Meta</span>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-item grid-item__text font-inter">176.00</div>
+              <div
+                class="grid-item grid-item__text font-inter grid_status cancelled"
+              >
+                Cancelled
+              </div>
+              <div class="grid-item grid-item__text font-inter">89453</div>
+              <div class="grid-item grid-item__text font-inter">March</div>
+              <div class="grid-item grid-item__text font-inter">Coding</div>
+              <div class="grid-item grid-item__text font-inter">
+                <div class="grid-item">
+                  <div class="grid-item__flex font-inter">
+                    <img src="./images/logo-angular.svg" alt="icon" />
+                    <span>Angular</span>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-item grid-item__text font-inter">49.00</div>
+              <div
+                class="grid-item grid-item__text font-inter grid_status active"
+              >
+                Active
+              </div>
+              <div class="grid-item grid-item__text font-inter">11467</div>
+              <div class="grid-item grid-item__text font-inter">February</div>
+              <div class="grid-item grid-item__text font-inter">Marketing</div>
+              <div class="grid-item grid-item__text font-inter">
+                <div class="grid-item">
+                  <div class="grid-item__flex font-inter">
+                    <img src="./images/logo-vue.svg" alt="icon" />
+                    <span>Vue</span>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-item grid-item__text font-inter">999.00</div>
+              <div
+                class="grid-item grid-item__text font-inter grid_status active"
+              >
+                Active
+              </div>
+              <div class="grid-item grid-item__text font-inter">67385</div>
+              <div class="grid-item grid-item__text font-inter">October</div>
+              <div class="grid-item grid-item__text font-inter">Finance</div>
+            </div>
+            <div class="pages font-inter">&lt; 1/15 &gt;</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
