@@ -387,10 +387,11 @@ const getCorrectString = (string) => {
  * [1, 2, [3, 4], 5, [[6, 7], 8], 9] => [1, 2, 3, 4, 5, 6, 7, 8, 9]
  */
 const getFlattenedArray = (numbers) => {
+  /// I know I can use flat method and give it an argument of infinity but I think this is just a work of art
   let arr = [];
   numbers.forEach((element) => {
     if (Array.isArray(element)) {
-      arr.push(getFlattenedArray(element));
+      getFlattenedArray(element).forEach((el) => arr.push(el));
     } else {
       arr.push(element);
     }
@@ -404,4 +405,18 @@ const getFlattenedArray = (numbers) => {
  *
  * [1, 2, 2, 4, 5, 5] => [2, 5]
  */
-const getNotUniqueValues = (numbers) => {};
+const getNotUniqueValues = (numbers) => {
+  let arr = [];
+  let strNumbers = numbers.join("");
+  for (let i = 0; i < numbers.length; i++) {
+    let replacedStrNumbers = strNumbers.replaceAll(numbers[i], "");
+    if (
+      strNumbers.length - replacedStrNumbers.length > 1 &&
+      arr.includes(numbers[i]) === -1
+    ) {
+      arr.push(numbers[i]);
+      strNumbers = numbers.join("");
+    }
+  }
+  return arr;
+};
