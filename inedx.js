@@ -33,7 +33,16 @@ const getOddValues = (numbers) => {
  * [4,2,10,27] => 2
  */
 const getSmallestValue = (numbers) => {
-  return Math.min(...numbers);
+  let smallest = 0;
+  for (let i = 0; i < numbers.length - 1; i++) {
+    smallest = numbers[i];
+    if (smallest < numbers[i + 1]) {
+      smallest = smallest;
+    } else {
+      smallest = numbers[i + 1];
+    }
+  }
+  return smallest;
 };
 /**
  * Exercise 3
@@ -42,7 +51,16 @@ const getSmallestValue = (numbers) => {
  * [5,22,9,43] => 43
  */
 const getBiggestValue = (numbers) => {
-  return Math.max(...numbers);
+  let biggest = 0;
+  for (let i = 0; i < numbers.length - 1; i++) {
+    biggest = numbers[i];
+    if (biggest > numbers[i + 1]) {
+      biggest = biggest;
+    } else {
+      biggest = numbers[i + 1];
+    }
+  }
+  return biggest;
 };
 /**
  * Exercise 4
@@ -289,12 +307,10 @@ const getSmallestRow = (numbers) => {
  * => [1,2,3,4]
  */
 const getSmallestColumn = (numbers) => {
-  let arr = [];
-  numbers.forEach((element) =>
-    element.reduce((a, b) => {
-      a + b;
-    }, 0)
-  );
+  let sumArray = numbers.map((element) => {
+    return element.reduce((a, b) => a + b);
+  });
+  return numbers[sumArray.indexOf(Math.min(...sumArray))];
 };
 /**
  * Exercise 18
@@ -364,19 +380,23 @@ const getCorrectString = (string) => {
   let arr = string.split("");
   let index = 0;
   let count = 0;
+
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i] === arr[i + 1]) {
-      if (count === 0) {
-        // with this line of code, I know from where I should start splicing.
-        index = i;
-      }
+    if (arr[i] === arr[i - 1] && arr[i] === arr[i - 2]) {
       count++;
-    } else if (count > 2) {
-      arr.splice(index, count - 2);
-      console.log(arr, "after");
-      count = 0;
+    } else {
+      if (count > 2) {
+        arr.splice(index + 1, count - 2);
+        i = index + 1;
+        count = 0;
+      }
+      index = i;
     }
   }
+  if (count > 2) {
+    arr.splice(index + 1, count - 2);
+  }
+  // this code has few problems.
   return arr.join("");
 };
 /**
@@ -410,12 +430,12 @@ const getNotUniqueValues = (numbers) => {
   let strNumbers = numbers.join("");
   for (let i = 0; i < numbers.length; i++) {
     let replacedStrNumbers = strNumbers.replaceAll(numbers[i], "");
+    console.log(replacedStrNumbers, strNumbers);
     if (
       strNumbers.length - replacedStrNumbers.length > 1 &&
-      arr.includes(numbers[i]) === -1
+      !arr.includes(numbers[i])
     ) {
       arr.push(numbers[i]);
-      strNumbers = numbers.join("");
     }
   }
   return arr;
