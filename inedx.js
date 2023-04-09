@@ -381,22 +381,19 @@ const getCorrectString = (string) => {
   let index = 0;
   let count = 0;
 
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] === arr[i - 1] && arr[i] === arr[i - 2]) {
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] === arr[i - 1]) {
       count++;
-    } else {
-      if (count > 2) {
-        arr.splice(index + 1, count - 2);
-        i = index + 1;
-        count = 0;
+      if (count > 1) {
+        arr.splice(i, 1);
+        i--;
       }
+    } else {
+      count = 0;
       index = i;
     }
   }
-  if (count > 2) {
-    arr.splice(index + 1, count - 2);
-  }
-  // this code has few problems.
+
   return arr.join("");
 };
 /**
