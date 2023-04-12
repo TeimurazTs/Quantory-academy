@@ -111,7 +111,7 @@
   renderApp();
 })();
 
-// letrs try it out this shit is sick!!!
+// letrs try it out this shit is sick!!
 
 function createElement(elementData) {
   const element = document.createElement(`${elementData.tag}`);
