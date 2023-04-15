@@ -91,17 +91,31 @@
 
     function addItem() {
       let task = document.querySelector(".input-add-task");
-      console.log(task.value)
+      console.log(task.value);
       items.push(task.value);
       task.value = "";
       let modal = document.querySelector(".modal");
-      console.log(modal)
+      console.log(modal);
       modal.remove();
       renderApp();
     }
 
+    function closedModalCallback() {
+      document.querySelector(".modal").remove();
+      document.body.removeEventListener("click", closedModalCallback);
+    }
+
+    function closeModal() {
+      document.body.addEventListener("click", closedModalCallback);
+    }
+
     function openModal(event) {
-      let modal = createElement({ tag: "div", classList: ["modal"] });
+      console.log('openmodal runs')
+      let modal = createElement({
+        tag: "div",
+        classList: ["modal"],
+        eventParameters: { name: "mouseleave", callback: closeModal },
+      });
       createElement({
         tag: "input",
         parent: modal,
@@ -112,6 +126,10 @@
         eventParameters: { name: "click", callback: addItem },
         parent: modal,
         text: "add Task",
+        classList: ["button-add-modal-input"],
+      });
+      modal.addEventListener("mouseenter", () => {
+        document.body.removeEventListener("click", closedModalCallback);
       });
       document.body.append(modal);
     }
@@ -119,7 +137,12 @@
     const div = document.createElement("div");
     div.classList.add("main");
 
-    createElement({ tag: "h2", parent: div, text: "To Do Tasks" });
+    createElement({
+      tag: "h2",
+      parent: div,
+      text: "To Do Tasks",
+      classList: ["todo-task-title"],
+    });
 
     const andInputSearch = document.createElement("div");
     andInputSearch.classList.add("andInputSearch", "margin-bt-md");
@@ -135,9 +158,9 @@
     createElement({
       tag: "button",
       text: "+ New Task",
-      eventParameters: { name: "onclick", callback: () => {} },
       parent: andInputSearch,
       eventParameters: { name: "click", callback: openModal },
+      classList: ["button-open-modal"],
     });
 
     div.append(andInputSearch);
@@ -208,6 +231,7 @@
             callback: deleteTodos,
           },
           parent: ul,
+          classList: ["button-delete"],
         });
       }
     }
@@ -255,6 +279,7 @@
           text: "delete",
           eventParameters: { name: "click", callback: deleteTodos },
           parent: ulDeleted,
+          classList: ["button-delete"],
         });
       }
     }
