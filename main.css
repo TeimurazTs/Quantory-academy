@@ -4,6 +4,39 @@
 }
 
 h2 {
-    text-align: center;
-    margin-bottom: 2.5rem;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.ul-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.p-all-task {
+  text-align: center;
+}
+
+.andInputSearch {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.andInputSearch input {
+  width: 40%;
+}
+
+.modal {
+  width: 50rem;
+  height: 50rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: antiquewhite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(-50%, -50%);
 }
